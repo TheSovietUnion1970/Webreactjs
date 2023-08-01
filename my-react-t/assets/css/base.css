@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    --header-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    height: var(--header-height);
+    position: fixed;
+    background: #0e9fc7;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 20px;
+}
+
+.header-title label{
+    color: #010101;
+}
+
+/* HAMBURGER CSS */
+.hamburger {
+    stroke: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all ease 0.3s;
+}
+.hamburger:hover {
+    stroke: #104654;
+    cursor: pointer;
+}
+
+/* SIDEBAR CSS */
+.aside {
+    background-color: #43bd1e;
+    padding-top: 70px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+    transition: all ease 0.5s;
+}
+
+.aside__heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: leftToRight 0.5s ease;
+}
+
+.aside__heading-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.aside__heading-name {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 800;
+    font-weight: 700;
+}
+
+.sidebar-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sidebar-item {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.sidebar-item-link {
+    display: block;
+    height: 65px;
+    color: #aaaaaa;
+    font-size: 20px;
+    text-align: start;
+    text-decoration: none;
+    padding-left: 30px;
+    font-weight: 600;
+    transition: all ease 0.2s;
+}
+
+.sidebar-item-link:hover {
+    color: #fff;
+    background-color: #1f5b68;
+}
+
+.sidebar-item-icon {
+    width: 30px;
+}
+
+.sidebar-item-icon.move-left {
+    animation: sidebar-item-icon 0.5s ease;
+    right: 14px;
+}
+
+@keyframes sidebar-item-icon {
+    from {
+        opacity: 0;
+        right: 0;
+    }
+    to {
+        opacity: 1;
+        right: 14px;
+    }
+}
+
+.sidebar-item-link span {
+    line-height: 70px;
+    text-align: start;
+    display: inline-block;
+}
+
+/* ACTIVE LINK */
+.active-link {
+    color: #fff;
+    background-color: #235b6785;
+}
+
+/* ANIMATION CSS */
+@keyframes leftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

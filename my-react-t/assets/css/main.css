@@ -1,0 +1,347 @@
+/*=============== HOME ===============*/
+#home {
+    height: 100vh;
+    background-color: white;
+}
+
+.section__home-title {
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: var(--header-height);
+    font-size: 18px;
+    color: black;
+}
+
+.section-content {
+    background-color: white;
+}
+
+.section-title {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding-top: var(--header-height);
+    
+}
+
+.triple-slider {
+    width: 100%;
+    margin: auto;
+}
+
+.triple-slider .swiper {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+}
+
+/*=============== DASHBOARD ===============*/
+#dashboard {
+    height: 100vh;
+    background-color: #fff;
+}
+.select-box {
+    outline: none;
+    border: 3px solid red;
+    font-size: 16px;
+}
+
+.section__dashboard-title h2 {
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: var(--header-height);
+    color: black;
+    font-weight: bold;
+}
+.section__dashboard-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-left: 180px;
+}
+
+.section__dashboard-content h2 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+/*=============== DASHBOARD2 ===============*/
+#dashboard2 {
+    height: 100vh;
+    background-color: #fff;
+}
+.select-box {
+    outline: none;
+    border: 3px solid red;
+    font-size: 16px;
+}
+
+.section__dashboard-title h2 {
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: var(--header-height);
+    color: black;
+    font-weight: bold;
+}
+.section__dashboard-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-left: 180px;
+}
+
+.section__dashboard-content h2 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.section__dashboard-control-content,
+.section__dashboard-monitor-content {
+    height: 400px;
+    box-shadow: 0 6px 6px #3c3c3c2c;
+    position: relative;
+    font-size: 20px;
+}
+
+/*=============== CONTROL ===============*/
+.section__dashboard-control {
+    border: 3px solid #999;
+    width: 20%;
+    padding: 5px;
+    margin: 0 20px;
+} 
+
+.text {
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.form-control {
+    font-size: 16px;
+}
+
+#time_form input{
+    width: 100%;
+    line-height: 2;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px; 
+    font-size: 20px;
+}
+
+.btn {
+    padding: 8px 20px;
+    transition: all ease 0.3s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    color: #0d6efd;
+    border: 3px solid #0d6efd;
+    background-color: white;
+}
+
+#led1, #led2, #led3 {
+    display: none;
+}
+
+#led1 span,
+#led2 span 
+#led3 span {
+    padding-left: 30px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#led1.active, #led2.active, #led3.active {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*=============== MONITOR ===============*/
+.section__dashboard-monitor {
+    border: 3px solid #999;
+    width: 60%;
+    padding: 5px;
+    margin: 0 20px;
+}
+
+.section__dashboard-monitor-content {
+    display: column;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.monitor__form-group {
+    width: 100%;
+    padding: 5px;
+    color: black;
+}
+
+.monitor__form-group-title {
+    font-weight: bold;
+    color: black;
+}
+
+.monitor__form-group th {
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.monitor__form-group td {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/*=============== USERS ===============*/
+/* #users {
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
+}
+.section__users_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.section__users_container {
+    width: 70%;
+    font-size: 20px;
+    border-collapse: collapse;
+    color: black;
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: antiquewhite;
+}
+
+.section__users_container thead tr {
+    background-color: #c7ba2e;
+    
+}
+
+.section__users_container thead tr th {
+    border-collapse: collapse;
+    letter-spacing: 0.5px;
+    opacity: 1;
+    padding: 15px;
+    vertical-align: top;
+    border: 1px solid rgb(11, 56, 95);
+}
+
+.section__users_container tbody th{
+    border-collapse: collapse;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    
+    border: 1px solid rgb(11, 56, 95);
+}
+
+.section__users_container tbody tr:nth-child(even){
+    background-color:rgb(237, 215, 185)
+} */
+
+/*=============== CHARTS ===============*/
+/* #charts {
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
+}
+
+.section__chart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.section__chart-container {
+    width: 80%;
+    border: 2.5px solid rgb(11, 56, 95);
+} */
+
+/*=============== ABOUT ===============*/
+#about {
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
+}
+
+.section__about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    margin: auto;
+}
+
+.section__about-container {
+    background-color: #f8f1f1;
+    width: 30%;
+    margin: 8px;
+}
+
+.section__about-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0.6em 0.6em 1.2em #78a8e8,
+                -0.5em -0.5em 1em #ffffff;
+    border-radius: 10px;
+}
+
+.section__about-card-avatar {
+    padding-top: 30px;
+    width: 220px;
+    height: 260px;
+}
+
+.section__about-card-img {
+    width: 100%;
+    display: block;
+}
+
+.section__about-card-info {
+    color: black;
+    text-align: center;
+}
+
+.section__about-card-name {
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+
+.section__about-card-id {
+    font-weight: bold;
+}
+
+.section__about-card-socials {
+    margin: 0 6px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ccee;
+}
+
+.section__about-card-link {
+    margin: 0 6px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #6c758f;
+    margin: 5px;
+}
+
+.section__about-card-icon {
+    font-size: 25px;
+    padding-top: 5px;
+}

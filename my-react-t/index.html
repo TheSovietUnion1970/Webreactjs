@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checking products</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -> create an image on dashboard-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .table-container.info {
+          margin-left: 250px;
+        }
+
+        .table-container.h1 {
+          margin-left: 300px;
+          margin-top: -520px;
+        }
+
+        .table-container.h2 {
+          margin-left: 300px;
+          margin-top: -300px;
+        }
+    </style>
+
+    <style>
+        #num1 {
+        font-size: 60px; /* You can adjust the value to set the desired font size */
+        }
+
+        #word {
+        margin-left: 110px;
+        font-size: 60px; /* You can adjust the value to set the desired font size */
+        margin-top: -400px;
+        }
+
+        table {
+        border-collapse: collapse; /* This property removes the space between table cells */
+        border: 1px solid rgb(62, 160, 23); /* This property adds a black border around the table */
+        }
+
+
+        .conveyor {
+        display: block; /* Ensure the image is displayed as a block element */
+        margin-top: 100px; /* You can adjust the value to set the desired space between text and image */
+        width: 500px; /* Adjust the width of the .gif image */
+        height: auto; /* This maintains the aspect ratio and adjusts the height accordingly */
+        margin-left: 200px;
+        }
+
+        .flag {
+        display: block; /* Ensure the image is displayed as a block element */
+        margin-top: 700px; /* You can adjust the value to set the desired space between text and image */
+        width: 500px; /* Adjust the width of the .gif image */
+        height: auto; /* This maintains the aspect ratio and adjusts the height accordingly */
+        margin-left: 200px;
+        }
+
+        .flag1 {
+        display: block; /* Ensure the image is displayed as a block element */
+        margin-top: 600px; /* You can adjust the value to set the desired space between text and image */
+        width: 500px; /* Adjust the width of the .gif image */
+        height: auto; /* This maintains the aspect ratio and adjusts the height accordingly */
+        margin-left: 200px;
+        }
+
+        .led_right {
+        display: block; /* Ensure the image is displayed as a block element */
+        margin-top: 270px; /* You can adjust the value to set the desired space between text and image */
+        width: 50px; /* Adjust the width of the .gif image */
+        height: auto; /* This maintains the aspect ratio and adjusts the height accordingly */
+        margin-left: 450px;
+        }
+
+        .App-header-info {
+        background-color: #3d8baf;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+        }
+
+        .App-header-about {
+        background-color: #3d8baf;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+        }
+
+/* Reset some default styles to have a clean starting point */
+button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.touched-button {
+  /* Set the dimensions and add some spacing */
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  margin-left: 80px;
+
+  /* Customize the appearance of the button */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Add a smooth transition effect on hover and when the button is active (touched/clicked) */
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Add a hover effect to the button */
+.touched-button:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for the active (touched/clicked) state of the button */
+.touched-button:active {
+  background-color: #003c80;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+
+    <style>
+      body {
+        background-image: url('soviet.png');
+        background-size: 1850px 970px;
+        background-repeat: no-repeat;
+      }
+    </style>
+</head>
+<body>
+  <!-- <div id="root2"></div> -->
+  <!-- <script src="dist/a2.js"></script> -->
+  <!-- <script src="dist/main2.js"></script> -->
+  <div class="app">
+    <header class="header">
+        <nav class="navbar">
+            <h3 class="header-title">SYSTEM : <label>CALCULATING THE NUMBER OF PRODUCTS</label></h3>
+            <svg class="hamburger" fill="none" height="17" viewBox="0 0 20 16" width="20"
+                xmlns="http://www.w3.org/2000/svg">
+                <line stroke-width="3" x2="20" y1="1" y2="1"></line>
+                <line stroke-width="3" x2="20" y1="8" y2="8"></line>
+                <line stroke-width="3" x2="20" y1="15" y2="15"></line>
+            </svg>
+        </nav>
+    </header>
+
+    <aside class="aside">
+        <div class="aside__heading">
+            <h3 class="aside__heading-name"> LTVT TEAM</h3>
+        </div>
+  
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-item">
+                    <a href="#home" class="sidebar-item-link active-link">
+                        <i class="sidebar-item-icon fa-solid fa-house"></i>
+                        <span>Info</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#dashboard" class="sidebar-item-link">
+                        <i class="sidebar-item-icon fas fa-gears"></i>
+                        <span>Process</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#dashboard2" class="sidebar-item-link">
+                      <i class="sidebar-item-icon fas fa-flag"></i>
+                      <span>Soviet</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#about" class="sidebar-item-link">
+                      <i class="sidebar-item-icon fas fa-info-circle"></i>
+                      <span>About</span>
+                  </a>
+              </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main">
+      
+      <section class="section_home-content" id="home">
+        <div id="root0"></div>
+        <script src="dist/g0.js"></script>
+      </section>
+      
+
+    
+        <section class="section__dashboard-content" id="dashboard">
+            <div class="section__dashboard-title">
+              <div id="root"></div>
+              <script src="dist/g1.js"></script>
+            </div>
+        </section>
+
+
+        <section class="section__about-content" id="dashboard2">
+          <div class="section__dashboard-title">
+            <div id="root2"></div>
+            <script src="dist/g2.js"></script>
+          </div>
+        </section>
+
+
+            <!------ About ------>
+            <section class="section__about-content" id="about">
+              <h1 class="section__about-title section-title">My Facebook</h1>
+                <div id="root3"></div>
+                <script src="dist/g3.js"></script>
+          </section>
+
+    </main>
+</div>
+
+  <script>
+                $(document).ready(function () {
+                    // code xu li form
+                    $(document).on('submit', '#time_form', function () {
+                        $.post("addData.php", $('#time_form').serialize(), function () {
+                            alert("reset")
+                        });
+                        return false;
+                    });
+                    updateTable();
+                });
+
+    setInterval(updateTable, 500);
+    var A_mem, B_mem, C_mem;
+    function updateTable() {
+      //yeu cau server call file.php
+      //npx webpack --mode=production
+      $.post("getData.php",
+       function (data) {
+        var num1 = data[0].num1
+        var num2 = data[0].num2
+        var s1 = data[0].status
+        var lg = data[0].green;
+        var lr = data[0].red;
+        var reset = data[0].reset;
+
+        A_mem = parseInt(s1);
+        B_mem = parseInt(lg);
+        C_mem = parseInt(lr);
+
+        document.getElementById("num1").innerHTML = num1;
+        document.getElementById("num2").innerHTML = num2;
+        document.getElementById("s1").innerHTML = s1;
+        document.getElementById("reset").innerHTML = reset;
+       })
+
+       changeImage_fanA(A_mem);
+       changeImage_green(B_mem);
+       changeImage_red(C_mem)
+    }
+    function changeImage_fanA(fanValue) {
+      var imageA = document.getElementById("fanA");         
+        if (fanValue === 1) {
+          imageA.src = "run.gif"; // Change the image source to fanon.gif when the value is 1
+        } 
+        else if (fanValue === 0) {
+          imageA.src = "stop.png"; // Change the image source to fanoff.jpg when the value is 0
+        }
+    }
+    function changeImage_green(fanValue) {
+      var imageA = document.getElementById("green");         
+        if (fanValue === 1) {
+          imageA.src = "green.jpeg"; // Change the image source to fanon.gif when the value is 1
+        } 
+        else if (fanValue === 0) {
+          imageA.src = "OFF.jpeg"; // Change the image source to fanoff.jpg when the value is 0
+        }
+    }
+    function changeImage_red(fanValue) {
+      var imageA = document.getElementById("red");         
+        if (fanValue === 1) {
+          imageA.src = "red.png"; // Change the image source to fanon.gif when the value is 1
+        } 
+        else if (fanValue === 0) {
+          imageA.src = "OFF.jpeg"; // Change the image source to fanoff.jpg when the value is 0
+        }
+    }
+  </script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
